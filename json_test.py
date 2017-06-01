@@ -20,6 +20,12 @@ class Seed():
         self.result=[]
         self.id=id
 
+    def assign(self, res):
+        self.result.append(res)
+
+
+
+
 class Output():
     def __init__(self):
         self.test="Output"
@@ -41,9 +47,12 @@ class ScrapperTask():
 
 class makelistoflist():
     def makelist(self):
+        a={}
+
         scrapperObj=ScrapperTask()
         list_list=[]
         listit=[]
+        a["list"] = listit
         children="NA"
         pre_list=scrapperObj.getParentInfo()
         len_pre_list=len(pre_list)
